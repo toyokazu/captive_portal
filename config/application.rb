@@ -11,6 +11,12 @@ module CaptivePortal
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.1
 
+    config.middleware.use OmniAuth::Builder do
+      provider :facebook, ENV['FACEBOOK_KEY'], ENV['FACEBOOK_SECRET']
+      #provider :twitter
+      #provider :google_oauth2
+    end
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.

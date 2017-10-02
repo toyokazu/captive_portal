@@ -8,6 +8,14 @@ end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
+# Use omniauth
+gem 'omniauth', '~> 1.6.1'
+# Use omniauth-facebook
+gem 'omniauth-facebook', '~> 4.0.0'
+# Use omniauth-twitter
+gem 'omniauth-twitter', '~> 1.4.0'
+# Use omniauth-google-oauth2
+gem 'omniauth-google-oauth2', '~> 0.5.2'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use Puma as the app server
