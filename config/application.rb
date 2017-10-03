@@ -17,6 +17,8 @@ module CaptivePortal
       #provider :google_oauth2
     end
 
+    config.i18n.default_locale = :ja
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.

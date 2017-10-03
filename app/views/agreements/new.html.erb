@@ -1,0 +1,8 @@
+これはテストです．
+
+<% #= p session[:access_log] %>
+<%= form_tag(agreement_path) do %>
+<%= radio_button_tag 'agreement', 'accept' %>承諾する<br>
+<%= radio_button_tag 'agreement', 'deny' %>拒否する<br>
+<%= submit_tag 'submit' %>
+<% end %>

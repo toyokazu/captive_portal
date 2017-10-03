@@ -1,3 +1,31 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
+  before_action :set_locale
+
+  def set_locale
+    I18n.locale = params[:locale] || I18n.default_locale
+  end
+
+  def default_url_options(options = {})
+    { locale: I18n.locale }.merge options
+  end
+
+  def extract_params(ap_type)
+    case ap_type
+    when "aruba"
+      session[:access_log] = {
+        mac: params[:mac],
+        essid: params[:essid],
+        ap_type: ap_type,
+        ap_mac: params[:ap_mac],
+        ip: params[:ip],
+        user_id: nil,
+        agreement: nil,
+        timestamp: nil
+      }.with_indifferent_access
+      session[:redirection] = {
+        url: params[:url]
+      }.with_indifferent_access
+    end
+  end
 end

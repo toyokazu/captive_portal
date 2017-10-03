@@ -9,6 +9,14 @@
   </head>
 
   <body>
+    <header>
+      <%= link_to '日本語', new_agreement_path(locale: :ja) %>/
+      <%= link_to 'English', new_agreement_path(locale: :en) %>/
+      <%= link_to '한국어', new_agreement_path(locale: :ko) %>/
+      <%= link_to '中国', new_agreement_path(locale: :"zh-CN") %>
+    </header>
+    <main>
     <%= yield %>
+    </main>
   </body>
 </html>
