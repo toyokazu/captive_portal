@@ -13,6 +13,6 @@ class AgreementsController < ApplicationController
 
   def create
     session[:access_log][:agreement] = params[:agreement]
-    redirect_to authentication_path
+    redirect_to auth_provider_path
   end
 end

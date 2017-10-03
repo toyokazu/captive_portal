@@ -1,0 +1,13 @@
+<% case session[:access_log][:ap_type] %>
+<% when "aruba" %>
+  <form id="aruba_form" method="POST" ACTION="https://securelogin.arubanetworks.com/swarm.cgi">
+    <input type="hidden" name="user" value="<%= ENV['ARUBA_USER'] %>">
+    <input type="hidden" name="password" value="<%= ENV['ARUBA_SECRET'] %>">
+    <input type="submit" name=”Login", value=”Login">
+  </form>
+  <script>
+    var f = document.getElementById('aruba_form');
+    f.style.display = 'none';
+    f.submit();
+  </script>
+<% end %>
