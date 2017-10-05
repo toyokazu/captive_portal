@@ -10,10 +10,10 @@
 
   <body>
     <header>
-      <%= link_to '日本語', url_for(locale: :ja) %>/
-      <%= link_to 'English', url_for(locale: :en) %>/
-      <%= link_to '한국어', url_for(locale: :ko) %>/
-      <%= link_to '中国', url_for(locale: :"zh-CN") %>
+      <%= link_to '日本語', url_for(header_params.merge(locale: :ja)) %>/
+      <%= link_to 'English', url_for(header_params.merge(locale: :en)) %>/
+      <%= link_to '한국어', url_for(header_params.merge(locale: :ko)) %>/
+      <%= link_to '中国', url_for(header_params.merge(locale: :"zh-CN")) %>
     </header>
     <main>
     <% flash.each do |name, msg| %>
@@ -22,7 +22,7 @@
     <%= yield %>
     </main>
     <footer>
-      <%= link_to t('application.return_to_term_of_service'), new_agreement_path %>
+      <%= link_to t('application.return_to_term_of_service'), new_agreement_path(footer_params) %>
     </footer>
   </body>
 </html>

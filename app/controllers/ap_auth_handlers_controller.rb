@@ -3,7 +3,8 @@ class ApAuthHandlersController < ApplicationController
 
   def show
     if session[:access_log]["uid"].nil?
-      redirect_to new_agreement_path, flash: {error: t('ap_auth_handlers.errors.not_authorized')}
+      update_carried_params
+      redirect_to new_agreement_path(@carried_params), flash: {error: t('ap_auth_handlers.errors.not_authorized')}
     end
   end
 end
