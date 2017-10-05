@@ -20,6 +20,13 @@ module CaptivePortal
 
     config.i18n.default_locale = :ja
 
+    config.ap_config = {
+      aruba: {
+        user: ENV['ARUBA_USER'],
+        password: ENV['ARUBA_PASSWORD']
+      }
+    }
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.

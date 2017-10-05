@@ -1,8 +1,8 @@
 <% case session[:access_log]["ap_type"] %>
 <% when "aruba" %>
   <form id="aruba_form" method="POST" action="https://securelogin.arubanetworks.com/swarm.cgi">
-    <input type="hidden" name="user" value="<%= ENV['ARUBA_USER'] %>">
-    <input type="hidden" name="password" value="<%= ENV['ARUBA_SECRET'] %>">
+    <input type="hidden" name="user" value="<%= CaptivePortal::Application.config.ap_config[:aruba][:user] %>">
+    <input type="hidden" name="password" value="<%= CaptivePortal::Application.config.ap_config[:aruba][:password] %>">
     <input type="hidden" name="cmd" value="authenticate">
     <input type="submit" name=”Login", value=”Login">
   </form>
