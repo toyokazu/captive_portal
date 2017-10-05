@@ -12,7 +12,8 @@ module CaptivePortal
     config.load_defaults 5.1
 
     config.middleware.use OmniAuth::Builder do
-      provider :facebook, ENV['FACEBOOK_KEY'], ENV['FACEBOOK_SECRET']
+      provider :facebook, ENV['FACEBOOK_KEY'], ENV['FACEBOOK_SECRET'],
+        scope: 'email,public_profile'
       #provider :twitter
       #provider :google_oauth2
     end

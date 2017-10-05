@@ -10,13 +10,19 @@
 
   <body>
     <header>
-      <%= link_to '日本語', new_agreement_path(locale: :ja) %>/
-      <%= link_to 'English', new_agreement_path(locale: :en) %>/
-      <%= link_to '한국어', new_agreement_path(locale: :ko) %>/
-      <%= link_to '中国', new_agreement_path(locale: :"zh-CN") %>
+      <%= link_to '日本語', url_for(locale: :ja) %>/
+      <%= link_to 'English', url_for(locale: :en) %>/
+      <%= link_to '한국어', url_for(locale: :ko) %>/
+      <%= link_to '中国', url_for(locale: :"zh-CN") %>
     </header>
     <main>
+    <% flash.each do |name, msg| %>
+      <%= content_tag :div, msg, :id => "flash_#{name}" %>
+    <% end %>
     <%= yield %>
     </main>
+    <footer>
+      <%= link_to t('application.return_to_term_of_service'), new_agreement_path %>
+    </footer>
   </body>
 </html>

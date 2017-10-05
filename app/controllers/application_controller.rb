@@ -14,10 +14,10 @@ class ApplicationController < ActionController::Base
     case ap_type
     when "aruba"
       session[:access_log] = {
-        mac: params[:mac],
-        essid: params[:essid],
         ap_type: ap_type,
         ap_mac: params[:ap_mac],
+        essid: params[:essid],
+        mac: params[:mac],
         ip: params[:ip],
         uid: nil,
         provider: nil,

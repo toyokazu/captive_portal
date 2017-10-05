@@ -211,3 +211,17 @@ en:
       long: "%B %d, %Y %H:%M"
       short: "%d %b %H:%M"
     pm: pm
+  application:
+    return_to_term_of_service: "Back to 'term of service'"
+  agreement:
+    term_of_service: "Write 'term of service' here."
+    accept: 'Accept'
+    deny: 'Deny'
+    errors:
+      mac_address_param_is_missing: "MAC address parameter is missing."
+  auth_providers:
+    choose_login_method: "Choose login method."
+    service_policy_explanation: "If you cannot accept 'term of service', we cannot provide our service."
+  ap_auth_handlers:
+    errors:
+      not_authorized: "You are not authorized."

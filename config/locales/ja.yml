@@ -203,3 +203,17 @@ ja:
       long: "%Y年%m月%d日(%a) %H時%M分%S秒 %z"
       short: "%y/%m/%d %H:%M"
     pm: 午後
+  application:
+    return_to_term_of_service: "利用規約に戻る"
+  agreement:
+    term_of_service: "利用規約をここに書く．"
+    accept: '承諾する'
+    deny: '拒否する'
+    errors:
+      mac_address_param_is_missing: "MACアドレスのパラメータが指定されていません．"
+  auth_providers:
+    choose_login_method: "ログイン方法を選択してください．"
+    service_policy_explanation: "利用規約をご承諾いただけない場合はサービスはご利用いただけません．"
+  ap_auth_handlers:
+    errors:
+      not_authorized: "アクセスが許可されていません．"

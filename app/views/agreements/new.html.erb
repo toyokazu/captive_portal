@@ -1,8 +1,7 @@
-これはテストです．
+<%= t('agreement.term_of_service') %>
 
-<% #= p session[:access_log] %>
 <%= form_tag(agreement_path) do %>
-<%= radio_button_tag 'agreement', 'accept' %>承諾する<br>
-<%= radio_button_tag 'agreement', 'deny' %>拒否する<br>
+<%= radio_button_tag 'agreement', 'accept' %><%= t('agreement.accept') %><br>
+<%= radio_button_tag 'agreement', 'deny' %><%= t('agreement.deny') %><br>
 <%= submit_tag 'submit' %>
 <% end %>
