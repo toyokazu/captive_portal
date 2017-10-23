@@ -207,13 +207,34 @@ ja:
     return_to_term_of_service: "利用規約に戻る"
   agreement:
     term_of_service: "利用規約をここに書く．"
-    accept: '承諾する'
-    deny: '拒否する'
+    accept: "承諾する"
+    deny: "拒否する"
+    submit: "送信"
     errors:
       mac_address_param_is_missing: "MACアドレスのパラメータが指定されていません．"
   auth_providers:
     choose_login_method: "ログイン方法を選択してください．"
     service_policy_explanation: "利用規約をご承諾いただけない場合はサービスはご利用いただけません．"
+    facebook: "Facebookでログイン"
+    twitter: "Twitterでログイン"
+    google_oauth2: "Googleでログイン"
+    identity: "登録したアカウントでログイン"
   ap_auth_handlers:
     errors:
       not_authorized: "アクセスが許可されていません．"
+  auth_identity:
+    pre_description: "アカウントをお持ちでない場合は"
+    create_an_account: "新規アカウントを登録"
+    post_description: "してください．"
+    auth_key: "メール"
+    password: "パスワード"
+    login: "ログイン"
+  auth_identity_register:
+    description: "アカウントの登録"
+    name: "お名前"
+    email: "メール"
+    password: "パスワード"
+    password_confirmation: "パスワード（確認）"
+    register: "登録"
+  sessions:
+    salt_is_missing: "匿名化のためのSaltが生成されていない可能性があります．"

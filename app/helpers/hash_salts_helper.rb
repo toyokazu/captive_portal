@@ -1,0 +1,2 @@
+module HashSaltsHelper
+end

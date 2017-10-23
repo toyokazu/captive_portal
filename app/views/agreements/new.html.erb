@@ -3,5 +3,5 @@
 <%= form_tag(agreement_path) do %>
 <%= radio_button_tag 'agreement', 'accept' %><%= t('agreement.accept') %><br>
 <%= radio_button_tag 'agreement', 'deny' %><%= t('agreement.deny') %><br>
-<%= submit_tag 'submit' %>
+<%= submit_tag t('agreement.submit') %>
 <% end %>

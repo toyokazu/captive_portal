@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ap_type: MyString
+  ap_mac: MyString
+  essid: MyString
+  mac: MyString
+  ip: MyString
+  uid: MyString
+  provider: MyString
+  agreement: false
+  created_at: 2017-10-22 16:41:29
+  deleted_at: 2017-10-22 16:41:29
+
+two:
+  ap_type: MyString
+  ap_mac: MyString
+  essid: MyString
+  mac: MyString
+  ip: MyString
+  uid: MyString
+  provider: MyString
+  agreement: false
+  created_at: 2017-10-22 16:41:29
+  deleted_at: 2017-10-22 16:41:29

@@ -1,10 +1,9 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_action :set_locale
-  before_action :init_carried_params
 
   protected
-  
+
   def set_locale
     I18n.locale = params[:locale] || I18n.default_locale
   end
@@ -16,13 +15,17 @@ class ApplicationController < ActionController::Base
   def extract_params
     case params[:ap_type]
     when "aruba"
-      init_default_session_values
+      init_session_values_for_aruba
     else
-      init_default_session_values
+      init_session_values
     end
   end
 
-  def init_default_session_values
+  def init_session_values
+    init_session_values_for_aruba
+  end
+
+  def init_session_values_for_aruba
     session[:access_log] = {
       ap_type: "aruba",
       ap_mac: params[:ap_mac],
@@ -31,8 +34,7 @@ class ApplicationController < ActionController::Base
       ip: params[:ip],
       uid: nil,
       provider: nil,
-      agreement: nil,
-      timestamp: nil
+      agreement: nil
     }
     session[:redirection] = {
       url: params[:url]
@@ -40,27 +42,26 @@ class ApplicationController < ActionController::Base
   end
 
   def extract_attributes(auth_hash)
-    case auth_hash[:provider]
+    case auth_hash["provider"]
     when "facebook"
       session[:attribute_log] = {
+        portal_locale: I18n.locale,
         location: auth_hash[:location]
       }
     when "twitter"
       session[:attribute_log] = {
+        portal_locale: I18n.locale,
         location: auth_hash[:location]
       }
     when "google_oauth2"
       session[:attribute_log] = {
+        portal_locale: I18n.locale,
         location: auth_hash[:location]
       }
+    when "identity"
+      session[:attribute_log] = {
+        portal_locale: I18n.locale
+      }
     end
-  end
-
-  def init_carried_params
-    @carried_params = {}
-  end
-
-  def update_carried_params
-    @carried_params = @carried_params.merge(session[:access_log].reject {|k,v| v.nil?})
   end
 end

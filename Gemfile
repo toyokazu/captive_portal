@@ -16,6 +16,8 @@ gem 'omniauth-facebook', '~> 4.0.0'
 gem 'omniauth-twitter', '~> 1.4.0'
 # Use omniauth-google-oauth2
 gem 'omniauth-google-oauth2', '~> 0.5.2'
+# Use omniauth-identity
+gem 'omniauth-identity', '~> 1.1.1'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use Puma as the app server

@@ -1,0 +1,10 @@
+<% if session[:access_log]["agreement"] == "accept" %>
+<%= t('auth_providers.choose_login_method') %>
+<ul>
+<% @providers.each do |provider| %>
+  <li><%= link_to t('auth_providers.' + provider), auth_path(provider: provider, origin: ap_auth_handler_path) %></li>
+<% end %>
+</ul>
+<% else %>
+<p><%= t('auth_providers.service_policy_explanation') %></p>
+<% end %>

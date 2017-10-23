@@ -1,9 +1,13 @@
 module ApplicationHelper
   def header_params
-    @carried_params
+    if params[:controller] == "agreements"
+      @access_log.extract_params
+    else
+      {}
+    end
   end
 
   def footer_params
-    session[:access_log].reject {|k,v| v.nil?}
+    @access_log.extract_params
   end
 end

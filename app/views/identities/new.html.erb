@@ -1,0 +1,24 @@
+<% extract_validation_errors %>
+<%= form_tag '/auth/identity/register', authenticity_token: false do |f| %>
+  <p>
+    <strong><%= t('auth_identity_register.description') %></strong>
+  </p>
+  <%= hidden_field_tag request_forgery_protection_token, form_authenticity_token(form_options: {action: '/auth/identity/callback', method: :post}) %>
+  <%= hidden_field_tag 'origin', params[:origin] %>
+  <%= hidden_field_tag 'locale', I18n.locale %>
+  <table>
+    <tr>
+      <td><%= t('auth_identity_register.email') %>:</td><td><%= text_field_tag :email, @identity.nil? ? nil : @identity.email %></td>
+    </tr>
+    <tr>
+      <td><%= t('auth_identity_register.name') %>:</td><td><%= text_field_tag :name, @identity.nil? ? nil : @identity.name  %></td>
+    </tr>
+    <tr>
+      <td><%= t('auth_identity_register.password') %>:</td><td><%= password_field_tag :password, @identity.nil? ? nil : @identity.password %></td>
+    </tr>
+    <tr>
+      <td><%= t('auth_identity_register.password_confirmation') %>:</td><td><%= password_field_tag :password_confirmation, @identity.nil? ? nil : @identity.password_confirmation %></td>
+    </tr>
+  </table>
+  <%= submit_tag t('auth_identity_register.register') %>
+<% end %>

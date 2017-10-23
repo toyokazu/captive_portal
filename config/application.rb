@@ -18,7 +18,7 @@ module CaptivePortal
       #provider :google_oauth2
     end
 
-    config.i18n.default_locale = :ja
+    config.i18n.default_locale = :en
 
     config.ap_config = {
       aruba: {

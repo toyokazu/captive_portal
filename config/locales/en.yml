@@ -217,11 +217,32 @@ en:
     term_of_service: "Write 'term of service' here."
     accept: 'Accept'
     deny: 'Deny'
+    submit: "Submit"
     errors:
       mac_address_param_is_missing: "MAC address parameter is missing."
   auth_providers:
     choose_login_method: "Choose login method."
     service_policy_explanation: "If you cannot accept 'term of service', we cannot provide our service."
+    facebook: "Facebook login"
+    twitter: "Twitter login"
+    google_oauth2: "Google login"
+    identity: "Local login"
   ap_auth_handlers:
     errors:
       not_authorized: "You are not authorized."
+  auth_identity:
+    pre_description: "If you don't have an account,"
+    create_an_account: "create an account"
+    post_description: "."
+    auth_key: "Email"
+    password: "Password"
+    login: "Login"
+  auth_identity_register:
+    description: "Create an Account"
+    name: "Name"
+    email: "Email"
+    password: "Password"
+    password_confirmation: "Password (Confirmation)"
+    register: "Register"
+  sessions:
+    salt_is_missing: "Salt for anonymization may be missing."
