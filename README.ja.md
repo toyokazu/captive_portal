@@ -1,4 +1,4 @@
-# 次世代Captive Portal
+# IoT実証実験のためのCaptive Portal
 
 本プロジェクトではIoT実証実験におけるエンドユーザ承諾を得るため，Free Wi-FiのCaptive Portalを活用する．現状のCaptive Portalはエンドユーザが快適に利用する上でいくつかの課題を抱えている．これらの課題解決のため，我々はCaptive Portalのプロトタイプ実装を提供し，新たな機能のテストを容易にする．以下プロトタイプ実装の利用方法について述べる．
 
