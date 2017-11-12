@@ -107,9 +107,6 @@ Alias /captive_portal /Library/WebServer/webapps/captive_portal/public
 
 <Directory /Library/WebServer/webapps/captive_portal/public>
   Allow from All
-  #Allow from 133.101.0.0/16
-  #Allow from 133.101.25.80
-  #Allow from 133.101.25.82
   #Deny from All
   Options -MultiViews
   # Uncomment this if you're on Apache >= 2.4:
