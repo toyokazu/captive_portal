@@ -2,8 +2,8 @@ class SessionsController < ApplicationController
   def create
     # for testing
     #@auth_hash = auth_hash
-    session[:access_log]["uid"] = auth_hash["uid"]
-    session[:access_log]["provider"] = auth_hash["provider"]
+    session[:access_log]['uid'] = auth_hash.uid
+    session[:access_log]['provider'] = auth_hash.provider
     extract_attributes(auth_hash)
     @access_log = AccessLog.new(session[:access_log])
     @attribute_log = AttributeLog.new(session[:attribute_log].merge(mac: @access_log.mac))

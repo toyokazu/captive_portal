@@ -46,17 +46,17 @@ class ApplicationController < ActionController::Base
     when "facebook"
       session[:attribute_log] = {
         portal_locale: I18n.locale,
-        location: auth_hash[:location]
+        location: auth_hash.info['location']
       }
     when "twitter"
       session[:attribute_log] = {
         portal_locale: I18n.locale,
-        location: auth_hash[:location]
+        location: auth_hash.info['location']
       }
     when "google_oauth2"
       session[:attribute_log] = {
         portal_locale: I18n.locale,
-        location: auth_hash[:location]
+        location: auth_hash.info['location']
       }
     when "identity"
       session[:attribute_log] = {
