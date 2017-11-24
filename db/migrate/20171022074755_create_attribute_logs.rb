@@ -6,6 +6,7 @@ class CreateAttributeLogs < ActiveRecord::Migration[5.1]
       t.string :locale
       t.string :location
       t.string :gender
+      t.string :email
       t.string :age_range
       t.string :timezone
       t.timestamp :created_at
