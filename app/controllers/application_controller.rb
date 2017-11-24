@@ -53,7 +53,8 @@ class ApplicationController < ActionController::Base
         session[:attribute_log] = {
             portal_locale: I18n.locale,
             location: auth_hash.info['location'],
-            email: auth_hash.info['email']
+            email: auth_hash.info['email'],
+            timezone: auth_hash.info['time_zone']
         }
       when "google_oauth2"
         session[:attribute_log] = {
