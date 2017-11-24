@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 20171022124856) do
     t.string "locale"
     t.string "location"
     t.string "gender"
+    t.string "email"
     t.string "age_range"
     t.string "timezone"
     t.datetime "created_at", null: false
